@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+main {
+  width: 70vw;
+  margin: 20px auto;
+}
+
+main header h1 {
+  border-bottom: thin solid coral;
+}
+
+main section p {
+  font-size: 48pt;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
