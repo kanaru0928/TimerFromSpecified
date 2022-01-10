@@ -3,12 +3,25 @@ body {
 }
 
 main {
-  width: 70vw;
+  width: 70%;
   margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    width: auto;
+  }
 }
 
 main header h1 {
   border-bottom: thin solid coral;
+}
+
+@media (max-width: 768px) {
+  main header h1 {
+    text-align: center;
+  }
 }
 
 main section p {

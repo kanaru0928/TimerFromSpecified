@@ -1,14 +1,31 @@
+$sp: 768px;
+
 body{
     margin: 0;
 }
 
+@mixin sp {
+    @media (max-width: $sp) {
+        @content;
+    }
+}
+
 main{
-    width: 70vw;
+    
+    width: 70%;
     margin: 20px auto;
+    
+    @include sp{
+        margin: 20px;
+        width: auto;
+    }
     
     header{
         h1{
             border-bottom: thin solid coral;
+            @include sp{
+                text-align: center;
+            }
         }
     }
     
