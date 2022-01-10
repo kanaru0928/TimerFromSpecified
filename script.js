@@ -4,13 +4,22 @@ var date
 
 function listenEvent(){
     $('#datetime').on('change', function () {
-        date = Date.parse($(this).val())
+        date = new Date(Date.parse($(this).val()))
+    });
+    $('#sec').on('change', function () {  
+        var sec = parseInt($('#sec').val());
+        if(sec > 59){
+            sec = 59;
+        }else if(sec < 0){
+            sec = 0;
+        }
+        date.setSeconds(sec)
     });
 }
 
 function tick(){
     if(date){
-        var now = Date.now();
+        var now = new Date();
         var time = now - date;
         var sec = Math.floor(time/1000)%60;
         var min = Math.floor(time/1000/60)%60;
