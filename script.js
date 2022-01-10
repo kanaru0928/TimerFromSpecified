@@ -5,16 +5,21 @@ var date
 function listenEvent(){
     $('#datetime').on('change', function () {
         date = new Date(Date.parse($(this).val()))
+        secondsCheck()
     });
     $('#sec').on('change', function () {  
-        var sec = parseInt($('#sec').val());
-        if(sec > 59){
-            sec = 59;
-        }else if(sec < 0){
-            sec = 0;
-        }
-        date.setSeconds(sec)
+        secondsCheck()
     });
+}
+
+function secondsCheck(){
+    var sec = parseInt($('#sec').val());
+    if(sec > 59){
+        sec = 59;
+    }else if(sec < 0){
+        sec = 0;
+    }
+    date.setSeconds(sec)
 }
 
 function tick(){
