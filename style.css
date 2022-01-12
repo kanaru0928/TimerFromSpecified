@@ -28,7 +28,7 @@ main header h1 {
   }
 }
 
-main section p {
+main section .time {
   font-size: 48pt;
   text-align: center;
 }
